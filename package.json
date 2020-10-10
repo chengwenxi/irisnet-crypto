@@ -1,52 +1,54 @@
 {
-  "name": "irisnet-crypto",
-  "version": "1.3.3",
-  "description": "irisnet-crypto",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha test/{test_tx_cosmos,test_hash_cosmos,test_hash_iris,test_account}.js --timeout 10000"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/irisnet/irisnet-crypto.git"
-  },
-  "keywords": [
-    "cosmos",
-    "javascript",
-    "crypto",
-    "blockChain"
-  ],
-  "author": "Wenxi Cheng <vincent@bianjie.ai>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/irisnet/irisnet-crypto/issues"
-  },
-  "homepage": "https://github.com/irisnet/irisnet-crypto#readme",
-  "dependencies": {
-    "base64-node": "^1.0.0",
-    "bech32": "^1.1.3",
-    "bignumber.js": "^5.0.0",
-    "bip39": "^2.5.0",
-    "bn": "git+https://github.com/shineabel/bn.git",
-    "create-hmac": "^1.1.7",
-    "ethereumjs-tx": "^1.3.0",
-    "ethereumjs-util": "^5.1.2",
-    "old": "^0.2.0",
-    "randombytes": "^2.0.6",
-    "ripemd160": "^2.0.1",
-    "secp256k1": "3.5.0",
-    "sha256": "^0.2.0",
-    "text-encoding": "^0.7.0",
-    "protobufjs": "^6.8.8",
-    "crypto-browserify": "^3.12.0",
-    "uuid": "^3.3.2",
-    "google-protobuf": "3.13.0",
-    "axios": "0.20.0"
-  },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^4.1.0",
-    "sync-request": "^6.1.0",
-    "isomorphic-fetch": "^2.2.1"
-  }
+    "name": "irisnet-crypto",
+    "version": "1.3.3",
+    "description": "irisnet-crypto",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha test/{test_tx_cosmos,test_hash_cosmos,test_hash_iris,test_account}.js --timeout 10000"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/irisnet/irisnet-crypto.git"
+    },
+    "keywords": [
+        "cosmos",
+        "javascript",
+        "crypto",
+        "blockChain"
+    ],
+    "author": "Wenxi Cheng <vincent@bianjie.ai>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/irisnet/irisnet-crypto/issues"
+    },
+    "homepage": "https://github.com/irisnet/irisnet-crypto#readme",
+    "dependencies": {
+        "base64-node": "^1.0.0",
+        "bech32": "^1.1.3",
+        "bignumber.js": "^5.0.0",
+        "bip39": "^2.5.0",
+        "bn": "git+https://github.com/shineabel/bn.git",
+        "create-hmac": "^1.1.7",
+        "ethereumjs-tx": "^1.3.0",
+        "ethereumjs-util": "^5.1.2",
+        "old": "^0.2.0",
+        "randombytes": "^2.0.6",
+        "ripemd160": "^2.0.1",
+        "secp256k1": "3.5.0",
+        "sha256": "^0.2.0",
+        "text-encoding": "^0.7.0",
+        "protobufjs": "^6.8.8",
+        "crypto-browserify": "^3.12.0",
+        "uuid": "^3.3.2",
+        "google-protobuf": "3.13.0",
+        "axios": "0.20.0",
+        "@ledgerhq/hw-transport-webusb": "latest",
+        "@ledgerhq/hw-transport-u2f": "^4.68.4"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "mocha": "^4.1.0",
+        "sync-request": "^6.1.0",
+        "isomorphic-fetch": "^2.2.1"
+    }
 }

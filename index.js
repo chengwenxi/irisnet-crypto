@@ -3,17 +3,21 @@ const Builder = require("./src/builder").Builder;
 const config = require('./config');
 const Codec = require('./src/util/codec');
 
-function getBuilder(chainName/*,network*/){
-    setNetwork(/*network*/);
+function getBuilder (chainName /*,network*/ ) {
+    setNetwork( /*network*/ );
     return Builder.getBuilder(chainName)
 }
 
-function getCrypto(chainName/*,network*/){
-    setNetwork(/*network*/);
+function getCrypto (chainName /*,network*/ ) {
+    setNetwork( /*network*/ );
     return Crypto.getCrypto(chainName)
 }
 
-function setNetwork(network){
+function getLedger () {
+    return require('./src/ledger')
+}
+
+function setNetwork (network) {
     // if(network && network === 'testnet'){
     //     config.iris.bech32 = {
     //         accAddr: "faa",
@@ -21,13 +25,13 @@ function setNetwork(network){
     //         accPub: "fap"
     //     };
     // }else {
-        config.iris.bech32 = {
-            accAddr: "iaa",
-            valAddr: "iva",
-            accPub: "iap"
-        };
+    config.iris.bech32 = {
+        accAddr: "iaa",
+        valAddr: "iva",
+        accPub: "iap"
+    };
     // }
     return config
 }
 
-module.exports = {getCrypto,getBuilder,config,Codec};
+module.exports = { getCrypto, getBuilder, getLedger, config, Codec };
