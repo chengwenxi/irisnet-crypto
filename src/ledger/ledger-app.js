@@ -362,7 +362,7 @@ module.exports = class IrisApp {
     }
     async sign (path, message) {
         const chunks = this.signGetChunks(path, message)
-        return this.signSendChunk(1, chunks.length, chunks[0], [0x9000]).then(
+        return this.signSendChunk(0, 0, chunks[0], [0x9000]).then(
             async response => {
                     let result = {
                         return_code: response.return_code,
@@ -373,7 +373,11 @@ module.exports = class IrisApp {
                     if (response.return_code === 0x9000) {
                         for (let i = 1; i < chunks.length; i += 1) {
                             // eslint-disable-next-line no-await-in-loop
-                            result = await this.signSendChunk(1 + i, chunks.length, chunks[i])
+                            let payloadDesc = 1
+                            if (i == chunks.length - 1) {
+                                payloadDesc = 2
+                            }
+                            result = await this.signSendChunk(payloadDesc, 0, chunks[i])
                             if (result.return_code !== 0x9000) {
                                 break
                             }
